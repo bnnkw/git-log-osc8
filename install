@@ -6,17 +6,17 @@ target="${HOME}/.local/bin"
 
 mkdir -p "$target"
 ln -sf "$repo/bin/git-log-pager"   "$target/git-log-pager"
-ln -sf "$repo/bin/handle-git-url"  "$target/handle-git-url"
+ln -sf "$repo/bin/handle-git-uri"  "$target/handle-git-uri"
 
 git config --global pager.log "git-log-pager"
 
 cat <<EOF
 installed:
   $target/git-log-pager   -> $repo/bin/git-log-pager
-  $target/handle-git-url  -> $repo/bin/handle-git-url
+  $target/handle-git-uri  -> $repo/bin/handle-git-uri
 
 git config --global pager.log = git-log-pager
 
 add to your shell profile or rc to enable hyperlink following in less:
-  export LESS_OSC8_git='echo "handle-git-url %o"'
+  export LESS_OSC8_git='echo "handle-git-uri %o"'
 EOF
