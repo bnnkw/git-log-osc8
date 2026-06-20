@@ -12,7 +12,7 @@ link in `less` opens `git show` for that commit.
 Then add to your shell profile or rc:
 
 ```sh
-export LESS_OSC8_git='echo "handle-git-uri %o"'
+export LESS_OSC8_OPEN_git='handle-git-uri'
 ```
 
 ## How it works
@@ -23,7 +23,7 @@ Two pieces, with one extra environment variable:
 
 2. `bin/handle-git-uri`: opens the OSC8 link with `git show`.
 
-3. `LESS_OSC8_git`: tells `less` to read this value and execute its stdout as a command on `Ctrl-O Ctrl-O`.
+3. `LESS_OSC8_OPEN_git`: tells `less` to run this value with the shell-escaped URI on `Ctrl-O Ctrl-O`.
 
 ## Navigate links
 

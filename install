@@ -18,5 +18,5 @@ installed:
 git config --global pager.log = git-log-pager
 
 add to your shell profile or rc to enable hyperlink following in less:
-  export LESS_OSC8_git='echo "handle-git-uri %o"'
+  export LESS_OSC8_OPEN_git='handle-git-uri'
 EOF
